@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'jy_api.apps.libs.context_processors.get_analytics_id'
             ],
         },
     },
@@ -162,4 +163,9 @@ SWAGGER_SETTINGS = {
         'title': 'Jon Young API',
     },
     'doc_expansion': 'none',
+}
+
+GOOGLE_ANALYTICS = {
+    'id': os.environ['GA_ID'],
+    'domain': os.environ['GA_DOMAIN'],
 }
