@@ -10,6 +10,22 @@
         Jon Young API</a>
 {% endblock %}
 
+{% block userlinks %}
+    {# TODO: get this from the Links objects #}
+    <li>
+      <a class="repo-link btn btn-link" href="http://randomjy.com">Blog</a>
+    </li>
+    <li>
+      <a class="repo-link btn btn-link" href="https://twitter.com/random_jyoung">Twitter</a>
+    </li>
+    <li>
+      <a class="repo-link btn btn-link" href="https://www.linkedin.com/in/jonryoung">LinkedIn</a>
+    </li>
+    <li>
+      <a class="repo-link btn btn-link" href="https://github.com/thejaywhy/jy_api">Source</a>
+    </li>
+  {% endblock %}
+
 {% block script %}
     <script src="{% static "rest_framework/js/jquery-1.8.1-min.js" %}"></script>
     <script src="{% static "rest_framework/js/bootstrap.min.js" %}"></script>
