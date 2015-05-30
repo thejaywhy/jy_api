@@ -62,7 +62,10 @@ resource "digitalocean_droplet" "jy_api" {
 }
 
 # Create a new domain record
-resource "digitalocean_domain" "default" {
-    name = "api.jonryoung.com"
-    ip_address = "${digitalocean_droplet.jy_api.ipv4_address}"
+resource "cloudflare_record" "api" {
+    domain = "${var.cf_domain}"
+    name = "api"
+    value = "${digitalocean_droplet.jy_api.ipv4_address}"
+    type = "A"
+    ttl = 300
 }
