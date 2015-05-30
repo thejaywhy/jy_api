@@ -69,6 +69,11 @@ def add_interests(apps, schema_editor):
             "description": "I like to use Bash for wrapper scripts to other functionality, especially for automating common operations on developer's machines. However, I do _not_ think bash is a good tool for automating production deployments.",
             "role": reliability_dev_role
         },
+        "Idempotence": {
+            "name": "Idempotence",
+            "description": "When building APIs, it's important that the same operation will always have the same effect. It's important to think about what happens about the data when building APIs.",
+            "role": backend_dev_role
+        },
         "TDD": {
             "name": "TDD",
             "description": "Test Driven Development is a great way to instil confidence in your code, and lets you know when you are have created the minimal feature.",
