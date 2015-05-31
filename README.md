@@ -24,20 +24,6 @@ python manage.py runserver
 ```
 Now visit http://localhost:8000 or http://localhost:8000/interactive/ in your web browser.
 
-
-### Vagrant
-This repo includes a Vagrantfile that spins up a VM with a private IP of `10.4.10.10`. This directory is then synched into the VM at `/var/projects`.
-```
-vagrant box add ubuntu/trusty64
-vagrant up
-vagrant ssh
-cd /var/projects/api
-python manage.py -r requirements.txt 
- python manage.py runserver 0.0.0.0:8000
-```
-Now visit http://10.4.10.10:8000 or http://10.4.10.10:8000/interactive/ in your web browser.
-
-
 ### Docker
 This repo also ships with support for Docker-Compose and Docker-Machine for local development. Follow these commands to spin up the API service:
 
